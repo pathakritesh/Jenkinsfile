@@ -1,0 +1,80 @@
+Quick Start Examples
+Below are some easily copied and pasted examples of a simple Pipeline with various languages.
+
+Java
+Jenkinsfile (Declarative Pipeline)
+pipeline {
+    agent { docker { image 'maven:3.3.3' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'mvn --version'
+            }
+        }
+    }
+}
+Toggle Scripted Pipeline (Advanced)
+Node.js / JavaScript
+Jenkinsfile (Declarative Pipeline)
+pipeline {
+    agent { docker { image 'node:6.3' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'npm --version'
+            }
+        }
+    }
+}
+Toggle Scripted Pipeline (Advanced)
+Ruby
+Jenkinsfile (Declarative Pipeline)
+pipeline {
+    agent { docker { image 'ruby' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'ruby --version'
+            }
+        }
+    }
+}
+Toggle Scripted Pipeline (Advanced)
+Python
+Jenkinsfile (Declarative Pipeline)
+pipeline {
+    agent { docker { image 'python:3.5.1' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'python --version'
+            }
+        }
+    }
+}
+Toggle Scripted Pipeline (Advanced)
+PHP
+Jenkinsfile (Declarative Pipeline)
+pipeline {
+    agent { docker { image 'php' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'php --version'
+            }
+        }
+    }
+}
+Toggle Scripted Pipeline (Advanced)
+Go
+Jenkinsfile (Declarative Pipeline)
+pipeline {
+    agent { docker { image 'golang' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'go version'
+            }
+        }
+    }
+}
